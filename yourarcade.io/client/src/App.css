@@ -1,0 +1,615 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
+/* define the fonts and colors used in the project */
+:root {
+  --font: 'Open Sans', sans-serif;
+  --color-bg: #383F51;
+  --color-txt: #ffff;
+  --color-bg-1: #f8f9fa;
+  --color-bg-2: #ffffff;
+  --color-home: #383F51;
+  --color-about: #DDDBF1;
+  --color-projects: #3C4F76;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+ --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+ --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+ --bs-body-font-family: Roboto Slab, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+ --bs-body-font-size: 1rem;
+ --bs-body-font-weight: 400;
+ --bs-body-line-height: 1.5;
+ --bs-body-color: #212529;
+ --bs-body-bg: #fff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-y: hidden !important;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  text-align: var(--bs-body-text-align);
+    background-color: black !important;
+    background-size: cover;
+  background-color: var(--bs-body-bg);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overflow-x: hidden;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+}
+
+hr {
+  margin: 1rem 0;
+  color: inherit;
+  background-color: currentColor;
+  border: 0;
+  opacity: 0.25;
+}
+
+h1 {
+    text-decoration: none !important;
+}
+
+@keyframes blink {
+	0% {opacity: 0}
+	49%{opacity: 0}
+	50% {opacity: 1}
+}
+
+.main-container{
+  font-family: 'Press Start 2P', cursive;
+  background-color: black;
+}
+
+.main-container h1 {
+}
+
+.header-container {
+  position: absolute;
+  left: 4vw;
+  width: 90%;
+  top: -10px;
+  text-align: center;
+  line-height: 40px;
+  letter-spacing: 5px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-top: 30px;
+}
+.header-icon {
+  margin-top: 30px;
+}
+.header-icon:hover {
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.background-container{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 25px 0px 0px 0px;
+  margin-top: 170px;
+}
+
+
+
+.sidebar-container {
+  position: absolute;
+  width: 96px;
+  height: 100%;
+  overflow-y: scroll;
+  z-index: 1000;
+  padding-top: 10px;
+  padding-left: 10px;
+
+  border: 1px solid black;
+}
+.sidebar-container::-webkit-scrollbar {
+  display: none;
+}
+.friends-list {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  border-radius: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1vw;
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  padding: 0.4em;
+  box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 1rem #5271ff,
+              0 0 0.3rem #5271ff,
+              0 0 1.3rem #5271ff,
+              inset 0 0 .9rem #5271ff;
+}
+.friends-list img {
+  object-fit: cover;
+}
+.friends-list h1 {
+  color: #5271ff;
+  font-size: 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.game-container {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  height: 100%;
+}
+.circle h1 {
+  font-size: 10px;
+  margin: 0 auto;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px !important;
+}
+
+.game-picture{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  align-self: center;
+}
+.game-picture:hover {
+  width: 110%;
+  height: 110%;
+  position: relative;
+  left: -10px;
+  top: -10px;
+}
+
+.swiper-slide {
+  margin-left: 50px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 18px;
+  background-image: url("https://ak.picdn.net/shutterstock/videos/1059501875/thumb/1.jpg?ip=x480");
+  background-size: cover;
+  border-radius: 25px;
+  height: 300px !important;
+  width: 500px !important;
+  text-decoration: none;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  border: 0.2rem solid #1041FF;
+  border-radius: 2rem;
+  padding: 0.4em;
+  box-shadow: 0 0 1.5rem #1041FF,
+              0 0 .2rem #1041FF,
+              0 0 2rem #1041FF,
+              0 0 0.8rem #8BFDFE,
+              0 0 1.8rem #147280;
+}
+
+.gamepage-container {
+  height: 100vw;
+  padding: 0px;
+}
+
+.game-header{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-top: 30px;
+}
+
+.grid {
+  height: 100%;
+  background-color: black;
+  background-size: 60px 55.1px;
+  background-image:
+    linear-gradient(to right, #070D0D 1px, transparent 1px),
+    linear-gradient(to bottom, #070D0D 1px, transparent 1px);
+}
+
+
+
+@font-face {
+  font-family: neon;
+  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+}
+
+.neon {
+  font-family: neon;
+  color: #E0E722;
+  font-size: 4vw;
+  line-height: 4vw;
+  text-shadow: 0 0 3vw #E0E722;
+}
+
+.smaller{
+  font-size: 3vw !important;
+  padding-bottom: 100px;
+}
+
+.flux {
+  font-family: neon;
+  color: #426DFB;
+  font-size: 4vw;
+  line-height: 4vw;
+  text-shadow: 0 0 3vw #2356FF;
+}
+
+.green-flux {
+  font-family: neon;
+  color: #7CFC00;
+  font-size: 3vw;
+  line-height: 4vw;
+  text-shadow: 0 0 3vw #7CFC00;
+
+}
+
+a:hover, a:visited, a:link, a:active{
+    text-decoration: none !important;
+}
+a {
+    color: #00A0C6;
+    text-decoration: none;
+}
+
+a:hover {
+    color:#00A0C6;
+    text-decoration:none;
+    cursor:pointer;
+}
+.fas{
+  text-decoration: none !important;
+}
+.green-flux {
+  -webkit-transform: translateZ(0);
+  animation: green-flux 4s linear infinite;
+  -moz-animation: green-flux 2s linear infinite;
+  -webkit-animation: green-flux 2s linear infinite;
+  -o-animation: green-flux 2s linear infinite;
+}
+@keyframes green-flux {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #7CFC00, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+    color: #0fa;
+  }
+  50% {
+    opacity: 50%;
+    color: #90EE90;
+  }
+}
+
+.neon {
+  animation: neon 1s ease infinite;
+  -moz-animation: neon 1s ease infinite;
+  -webkit-animation: neon 1s ease infinite;
+  -webkit-transform: translate3d(0,0,0);
+}
+
+@keyframes neon {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #E0E722, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+    color: #FED128;
+  }
+  50% {
+    opacity: 80%;
+  }
+}
+
+.flux {
+  -webkit-transform: translateZ(0);
+  animation: flux 2s linear infinite;
+  -moz-animation: flux 2s linear infinite;
+  -webkit-animation: flux 2s linear infinite;
+  -o-animation: flux 2s linear infinite;
+}
+
+@keyframes flux {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+    color: #28D7FE;
+  }
+  50% {
+    opacity: 50%;
+    color: #146C80;
+  }
+}
+
+/* GAMES TIC TAC TOE */
+.game-align {
+  text-align: center;
+  margin-top: -20px;
+}
+.center {
+  text-align: center;
+  margin-top: 20px;
+}
+.center2 {
+  text-align: center;
+  margin-top: 200px;
+}
+.board {
+    margin: auto;
+    padding-top: 50px;
+    width: 700px;
+  }
+  .board button {
+    height: 200px;
+    width: 200px;
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    color: black;
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    font-size: 3em;
+    box-shadow: 0 0 .2rem #FED128,
+                0 0 .2rem #FED128,
+                0 0 2rem #FA1C16,
+                0 0 0.8rem #FA1C16,
+                0 0 2.8rem #FA1C16,
+                inset 0 0 1.3rem #FA1C16;
+
+  }
+
+  .X {
+    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+    color: #FED128 !important;
+  }
+
+  .O {
+    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+    color: #28D7FE !important;
+  }
+
+  #messages {
+    color: white;
+  }
+
+  .game-over-win {
+    text-shadow: 0 0 1vw #7CFC00, 0 0 .4vw #0fa, .3vw .3vw .1vw #0fa, 0 0 .2vw #90EE90, .3vw .2vw .1vw #90EE90;
+    color: #7CFC00 !important;
+    font-size: 1vw;
+    width: 100% !important;
+    left: 200px;
+    top: 400px;
+  }
+  .game-over-lost {
+    text-shadow: 0 0 1vw #FA1C16, 0 0 .4vw #FA1C16, .3vw .3vw .1vw #FA1C16, 0 0 .2vw #FED128, .3vw .2vw .1vw #FED128;
+    color: #FED128 !important;
+    font-size: 1vw;
+    width: 100% !important;
+    left: 200px;
+    top: 400px;
+  }
+
+  /* GAMES TRON */
+
+  #canvas {
+      width: 90%;
+      height: 35%;
+      border: 1px solid white;
+      background-color: black;
+      box-shadow: 0 0 .2rem #FED128,
+                  0 0 .2rem #FED128,
+                  0 0 2rem #FA1C16,
+                  0 0 0.8rem #FA1C16,
+                  0 0 2.8rem #FA1C16,
+                  inset 0 0 1.3rem #FA1C16;
+      display: flex;
+      margin: 40px auto;
+
+    }
+
+  #game {
+    background-color: lightblue;
+    border: 2px solid black;
+    margin: auto;
+    margin-left: 50px;
+  }
+
+  #playerCount {
+    width: 100%;
+    text-align: center;
+  }
+
+  #scores {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+
+  #header {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+  }
+  #tron-messages{
+    margin-left: 100px !important;
+    color: white;
+  }
+
+    /* CONNECT 4 */
+
+  .board4 {
+      margin: auto;
+      margin-top: 40px;
+      padding-top: 20px;
+      width: 820px;
+      height: 670px;
+      padding-left: 40px;
+      background-color:black;
+      box-shadow: 0 0 .2rem #1041FF,
+                  0 0 .2rem #1041FF,
+                  0 0 2rem #1041FF,
+                  0 0 0.8rem #8BFDFE,
+                  0 0 2.8rem #147280;
+
+    }
+
+    .board4 button {
+        height: 80px;
+        width: 80px;
+        background-color: black;
+        color: white;
+        float: left;
+        z-index: 1000;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        font-size: 3em;
+        border-radius: 100%;
+        box-shadow: 0 0 .2rem #1041FF,
+                    0 0 .2rem #1041FF,
+                    0 0 1rem #1041FF,
+                    0 0 1.0rem #8BFDFE,
+                    0 0 1.8rem #147280;
+    }
+    .board-background{
+      position: absolute;
+      bottom: 110px;
+      left: -35px;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+
+    }
+
+    #messages4{
+      color: white;
+      margin-top: 700px;
+    }
+
+    .connect4-red{
+      color:#FA1C16 !important;
+      background-color: #FA1C16 !important;
+      border: 0px solid black;
+      box-shadow: 0 0 1vw #FA1C16, 0 0 .4vw #FA1C16, .3vw .3vw .1vw #FA1C16, 0 0 .2vw #FED128, .3vw .2vw .1vw #FED128 !important;
+    }
+    .connect4-yellow{
+      color:#FED128 !important;
+      background-color: #FED128 !important;
+      border: 0px solid black;
+        box-shadow: 0 0 1vw #FED128, 0 0 .4vw #FED128, .3vw .3vw .1vw #FED128, 0 0 .2vw #FA1C16, .3vw .2vw .1vw #FA1C16 !important;
+    }
+
+  /* PINBALL GAME*/
+
+  /*  ABOUT PAGE*/
+  .fade {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  top: 300px;
+  z-index: 1;
+  background-color: none;
+}
+
+.star-wars {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 800px;
+  background-color: none;
+  font-size: 600%;
+  font-weight: 600;
+  color: #FED128;
+  letter-spacing: 6px;
+  line-height: 150%;
+  perspective: 700px;
+  text-align: justify;
+}
+
+.crawl {
+  position: relative;
+  top: 99999px;
+  transform-origin: 50% 100%;
+  animation: crawl 60s linear;
+}
+
+.crawl > .title {
+  font-size: 90%;
+  text-align: center;
+}
+
+.crawl > .title h1 {
+  margin: 0 0 100px;
+  text-transform: uppercase;
+}
+
+@keyframes crawl {
+	0% {
+    top: -100px;
+    transform: rotateX(20deg)  translateZ(0);
+  }
+	100% {
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
+}
+
+  /*  LEADERBOARD PAGE*/
+
+  .leaderboard-container{
+    width: 80vw;
+    height: 35vw;
+    margin: 230px auto;
+    border: 0px solid black;
+    box-shadow: 0 0 1vw #FED128, 0 0 .4vw #FED128, .3vw .3vw .1vw #FED128, 0 0 .2vw #FA1C16, .3vw .2vw .1vw #FA1C16 !important;
+  }
+
+  .leaderboard-buttons {
+    width: calc(100% / 8);
+    padding: 10px;
+    margin-top: 0px;
+    background-color: black;
+    color: white;
+    border-bottom: 1px solid black;
+    box-shadow: 0 0 1vw #FED128, 0 0 .4vw #FED128, .3vw .3vw .1vw #FED128, 0 0 .2vw #FA1C16, .3vw .2vw .1vw #FA1C16 !important;
+  }
+  .leaderboard-buttons:hover {
+    cursor: pointer;
+    border-bottom: 1px solid #1041FF;
+    box-shadow: 0 0 1.5rem #1041FF,
+                0 0 .2rem #1041FF,
+                0 0 2rem #1041FF,
+                0 0 0.8rem #8BFDFE,
+                0 0 1.8rem #147280 !important;
+  }
